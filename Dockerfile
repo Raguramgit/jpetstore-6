@@ -1,4 +1,3 @@
-FROM openjdk:8
+FROM tomcat:8.5.95-jdk21-temurin-jammy
 EXPOSE 80
-COPY target/*.war jpetstore.war
-ENTRYPOINT ["java","-jar","/jpetstore.war"]
+COPY target/*.war /usr/local/tomcat/webapps/
