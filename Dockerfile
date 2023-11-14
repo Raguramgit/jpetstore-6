@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM FROM openjdk:17-alpine
 EXPOSE 80
-ADD target/jpetstore.war jpetstore.war
+COPY target/*.war jpetstore.war
 ENTRYPOINT ["java","-jar","/jpetstore.war"]
